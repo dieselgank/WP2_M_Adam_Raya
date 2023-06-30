@@ -54,13 +54,10 @@
 			method="post">
 			<div class="modal-body">
 				<div class="form-group">
-					<select name="kategori" class="form-control
-					form-control-user">
-					<option value="">Pilih Kategori</option>
-					<?php $k =['Sains','Hobby','Komputer','Komunikasi','Hukum','Agama','Populer','Bahasa','Komik'];
-					for ($i=0;$i<9;$i++) { ?><option value="<?= $k[$i];?>"><?=$k[$i];?></option>
-					<?php } ?>
-				</select>
+					<div class="form-group">
+                    <input type="hidden" name="id" id="id" value="<?php echo $k['id']; ?>">
+                    <input type="text" class="form-control form-control-user" id="kategori" name="kategori" placeholder="Masukkan Kategori Buku" value="">
+                </div>
 			</div>
 		</div>
 		<div class="modal-footer">

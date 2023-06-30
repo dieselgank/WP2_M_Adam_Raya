@@ -9,7 +9,7 @@
                </div>
            <?php }?>
            <?= $this->session->flashdata('pesan'); ?>
-           <a href="" class="btn btn-primary mb-3" datatoggle="modal" data-target="#bukuBaruModal"><i class="fas fa-filealt"></i> Buku Baru</a>
+           <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#bukuBaruModal"><i class="fas fa-book"></i> Buku Baru</a>
            <table class="table table-hover">
                <thead>
                    <tr>
@@ -42,19 +42,12 @@
                            <td><?= $b['dibooking']; ?></td>
                            <td>
                                <picture>
-                                   <source srcset=""
-                                   type="image/svg+xml">
+                                   <source srcset="" type="image/svg+xml">
                                    <img src="<?= base_url('assets/img/upload/') . $b['image'];?>" class="img-fluid img-thumbnail" alt="...">
                                </picture></td>
                                <td>
-                                   <a href="<?=
-                                   base_url('buku/ubahBuku/').$b['id'];?>" class="badge badge-info"><i
-                                   class="fas fa-edit"></i> Ubah</a>
-                                   <a href="<?=
-                                   base_url('buku/hapusbuku/').$b['id'];?>" onclick="return
-                                   confirm('Kamu yakin akan menghapus <?= $judul.'
-                                   '.$b['judul_buku'];?> ?');" class="badge badge-danger"><i class="fas
-                                   fa-trash"></i> Hapus</a>
+                                   <a href="<?= base_url('buku/ubahBuku/').$b['id'];?>" class="badge badge-info"><i class="fas fa-edit"></i> Ubah</a>
+                                   <a href="<?= base_url('buku/hapusbuku/').$b['id'];?>" onclick="return confirm('Kamu yakin akan menghapus <?= $judul.' '.$b['judul_buku'];?> ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
                                </td>
                            </tr>
                        <?php } ?>
@@ -67,18 +60,17 @@
 </div>
 <!-- End of Main Content -->
 <!-- Modal Tambah buku baru-->
-<div class="modal fade" id="bukuBaruModal" tabindex="-1"
-role="dialog" aria-labelledby="bukuBaruModalLabel" ariahidden="true">
+<div class="modal fade" id="bukuBaruModal" tabindex="-1" role="dialog" aria-labelledby="bukuBaruModalLabel" ariahidden="true">
 <div class="modal-dialog" role="document">
    <div class="modal-content">
        <div class="modal-header">
            <h5 class="modal-title"
            id="bukuBaruModalLabel">Tambah Buku</h5>
-           <button type="button" class="close" datadismiss="modal" aria-label="Close">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                <span aria-hidden="true">&times;</span>
            </button>
        </div>
-       <form action="<?= base_url('buku'); ?>" method="post"
+       <form action="<?= base_url('buku/index'); ?>" method="post"
         enctype="multipart/form-data">
         <div class="modal-body">
            <div class="form-group">
@@ -86,7 +78,7 @@ role="dialog" aria-labelledby="bukuBaruModalLabel" ariahidden="true">
                placeholder="Masukkan Judul Buku">
            </div>
            <div class="form-group">
-               <select name="id_kategori" class="formcontrol form-control-user">
+               <select name="id_kategori" class="form-control form-control-user">
                    <option value="">Pilih Kategori</option>
                    <?php
                    foreach ($kategori as $k) { ?>
