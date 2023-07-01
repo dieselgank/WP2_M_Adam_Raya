@@ -1,2 +1,2 @@
 # WP2_Perpus_M_Adam_Raya
-![Alt text](https://i.pinimg.com/564x/c8/d2/e6/c8d2e6681e0d48f26f2a76c7c0b01e3e.jpg)
+![Alt text](https://i.pinimg.com/564x/e5/b1/48/e5b148fa2d822ed37ccce3c6b7e4a162.jpg)
